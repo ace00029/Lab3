@@ -8,8 +8,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import net.objecthunter.exp4j.tokenizer.UnknownFunctionOrVariableException;
-
 import utils.TextTransform;
 
 public class MainActivity extends AppCompatActivity
@@ -17,7 +15,8 @@ public class MainActivity extends AppCompatActivity
 
     private TextView calculatorScreen;
     private Button backButton, clearButton,changeSignButton,
-            sqrRootButton,sumButton,subButton,multButton,divButton, equalButton;
+            sqrRootButton,sumButton,subButton,multButton,divButton, equalButton,
+            moduloButton,oneDividedByXButton;
     private Button n0Button, n1Button,n2Button,n3Button,n4Button,n5Button,
             n6Button,n7Button,n8Button,n9Button, dotButton;
 
@@ -46,6 +45,10 @@ public class MainActivity extends AppCompatActivity
         divButton.setOnClickListener(this);
         equalButton = (Button) findViewById(R.id.equal);
         equalButton.setOnClickListener(this);
+        moduloButton = (Button) findViewById(R.id.modulo);
+        moduloButton.setOnClickListener(this);
+        oneDividedByXButton = (Button) findViewById(R.id.oneDividedByX);
+        oneDividedByXButton.setOnClickListener(this);
         n0Button = (Button) findViewById(R.id.n0);
         n0Button.setOnClickListener(this);
         n1Button = (Button) findViewById(R.id.n1);
@@ -97,6 +100,10 @@ public class MainActivity extends AppCompatActivity
                             Toast.LENGTH_LONG).show();
                     calculatorScreen.setText(TextTransform.clear());
                 }
+                break;
+            }
+            case R.id.oneDividedByX: {
+                calculatorScreen.setText(TextTransform.dividedByX(currentDisplay));
                 break;
             }
             default: {

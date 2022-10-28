@@ -42,7 +42,6 @@
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
             android:id="@+id/MR"
-            android:tag="NotNumber"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -96,7 +95,6 @@
             android:backgroundTint="@color/button_blue"
             android:layout_marginRight="5dp"
             android:id="@+id/back"
-            android:tag="Back"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -207,7 +205,7 @@
             android:textColor="@color/text_blue"
             android:backgroundTint="@color/button_blue"
             android:layout_marginLeft="5dp"
-            android:id="@+id/percent"
+            android:id="@+id/modulo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -423,8 +421,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:layout_marginLeft="5dp"
-                    >
+                    android:layout_marginLeft="5dp">
                     <Button
                         android:textColor="@color/text_blue"
                         android:backgroundTint="@color/button_blue"

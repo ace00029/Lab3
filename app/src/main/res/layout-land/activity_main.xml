@@ -200,7 +200,7 @@
                 android:textColor="@color/text_blue"
                 android:backgroundTint="@color/button_blue"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/percent"
+                android:id="@+id/modulo"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

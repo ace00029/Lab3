@@ -1,12 +1,7 @@
 package utils;
 
-import android.widget.Toast;
-
-import com.example.lab3.MainActivity;
-
 import net.objecthunter.exp4j.ExpressionBuilder;
 import net.objecthunter.exp4j.Expression;
-import net.objecthunter.exp4j.tokenizer.UnknownFunctionOrVariableException;
 
 public class TextTransform {
     public static String concatenate (String original, CharSequence newChar) {
@@ -59,6 +54,7 @@ public class TextTransform {
         double result;
         String expresionToCalculate = "";
 
+        //check sqroot
         int sqrRootIndex = expresion.indexOf('\u221A');
         if (sqrRootIndex != -1) {
             expresionToCalculate = expresion.substring(0, sqrRootIndex);
@@ -74,5 +70,22 @@ public class TextTransform {
             throw e;
         }
         return String.valueOf(result);
+    }
+
+    public static String dividedByX (String currentDisplay) {
+        String toRet = "1/";
+        int i = currentDisplay.length()-1;
+        Boolean enfOfNumber = false;
+        char[] displayArray = currentDisplay.toCharArray();
+        while (!enfOfNumber && i >0) {
+            if (displayArray[i] == '+' || displayArray[i] == '-' || displayArray[i] == '*' ||
+                    displayArray[i] == '/' || displayArray[i] == '%' ||displayArray[i] == '\u221A') {
+                enfOfNumber = true;
+//                toRet = toRet + currentDisplay.substring(i);
+            }
+            i--;
+        }
+        toRet = toRet + currentDisplay.substring(i);
+        return toRet;
     }
 }
