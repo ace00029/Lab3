@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Lab3</string>
+    <string name="numButton">Number</string>
+    <string name="nanButton">NotNumber</string>
+    <string name="backButton">Back</string>
+    <string name="clearButton">Clear</string>
+    <string name="signChangeButton">SignChange</string>
 </resources>
